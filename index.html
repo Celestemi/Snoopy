@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto</title>
+    <title>¿Ya Comiste?</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>¡Bienvenido a mi proyecto! 🎉</h1>
-        <p id="mensaje">Presiona el botón para ver algo genial.</p>
-        <button onclick="mostrarMensaje()">Haz clic aquí</button>
+        <h1>¡Hola! Soy Snoopy</h1>
+        <p id="mensaje">¿Ya comiste?</p>
+        <div class="buttons">
+            <button onclick="responder('si')">Sí</button>
+            <button onclick="responder('no')">No</button>
+        </div>
+        <div id="snoopy-imagen">
+            <img id="snoopy-img" src="" alt="Snoopy">
+        </div>
+        <p id="respuesta"></p>
     </div>
     <script src="script.js"></script>
 </body>
