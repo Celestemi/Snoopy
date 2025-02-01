@@ -25,13 +25,13 @@ body {
 
 h1 {
     font-size: 2.5em;
-    color: white;
+    color: black;
     margin-bottom: 20px;
 }
 
 #mensaje {
     font-size: 1.2em;
-    color: white;
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -57,16 +57,13 @@ h1 {
 
 /* Cuadro de respuesta */
 .response-container {
-    background-color: #4CAF50;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-/* Imagen y texto de respuesta */
 #respuesta {
     font-size: 1.5em;
-    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -75,6 +72,18 @@ h1 {
     height: auto;
     margin-top: 20px;
     border-radius: 10px;
+}
+
+/* Respuesta cuando es "Sí" */
+.response-container-yes {
+    background-color: #007BFF; /* Azul */
+    color: white;
+}
+
+/* Respuesta cuando es "No" */
+.response-container-no {
+    background-color: #000000; /* Negro */
+    color: white;
 }
 
 /* Cuadro de San Valentín */
@@ -89,11 +98,4 @@ h1 {
     font-size: 1.2em;
     color: white;
     margin-top: 10px;
-}
-
-.san-valentin-img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px;
 }
