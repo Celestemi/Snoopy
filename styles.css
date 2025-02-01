@@ -1,105 +1,51 @@
-/* Estilo general de la página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: 100vh;
+    margin: 0;
 }
 
-/* Contenedor principal */
 .container {
-    max-width: 600px;
-    width: 100%;
-    padding: 20px;
+    text-align: center;
 }
 
-/* Cuadro del quiz (antes de responder) */
-.quiz-container {
-    background-color: #4CAF50;
+.question-box {
+    background-color: green;
+    color: black;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
     margin-bottom: 30px;
 }
 
-h1 {
-    font-size: 2.5em;
-    color: black;
-    margin-bottom: 20px;
-}
-
-#mensaje {
-    font-size: 1.2em;
-    color: black;
-    margin-bottom: 20px;
-}
-
 .buttons button {
-    font-size: 1.2em;
-    padding: 10px 20px;
     margin: 10px;
-    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #ffffff;
-    color: #4CAF50;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
-.buttons button:hover {
-    background-color: #45a049;
-}
-
-.buttons button:active {
-    background-color: #388e3c;
-}
-
-/* Cuadro de respuesta */
-.response-container {
-    padding: 30px;
-    border-radius: 10px;
+.response-container, .san-valentine-container {
+    display: block;
     margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
 }
 
-#respuesta {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-#imagen-respuesta img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-/* Respuesta cuando es "Sí" */
 .response-container-yes {
-    background-color: #007BFF; /* Azul */
-    color: white;
+    background-color: #87CEEB;
 }
 
-/* Respuesta cuando es "No" */
 .response-container-no {
-    background-color: #000000; /* Negro */
+    background-color: #333;
     color: white;
 }
 
-/* Cuadro de San Valentín */
-.san-valentin-container {
-    background-color: #ff69b4;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.san-valentin-container p {
-    font-size: 1.2em;
-    color: white;
-    margin-top: 10px;
+.san-valentine-container {
+    background-color: #FFB6C1;
 }
