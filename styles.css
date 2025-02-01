@@ -5,12 +5,16 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 
 /* Contenedor principal */
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    width: 100%;
     padding: 20px;
 }
 
