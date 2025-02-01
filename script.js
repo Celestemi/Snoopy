@@ -1,31 +1,32 @@
-function responder(respuesta) {
-    let respuestaText = '';
-    let respuestaImagen = '';
-    let respuestaClass = '';
+function respond(response) {
+    let responseText = '';
+    let responseImage = '';
+    let responseClass = '';
 
-    // Mostrar el contenedor de la respuesta
-    document.getElementById('respuesta-container').style.display = 'block';
-    document.getElementById('san-valentin-container').style.display = 'none'; // Ocultar el San Valentín por ahora
+    // Show response box
+    document.getElementById('response-container').style.display = 'block';
+    document.getElementById('san-valentine-container').style.display = 'none'; // Hide San Valentine message
 
-    if (respuesta === 'Yes') {
-        respuestaText = '¡Yupiiiiiiiiiiiiiiiiiiiii! Pero si me vuelvo a desaparecer es culpa de mis compaleras que me dejan hacer muchas cosas.';
-        respuestaImagen = '<img src="https://i.pinimg.com/736x/03/34/b0/0334b0c904f22e716b37bae10560a7aa.jpg" alt="Yupiiii" />';
-        respuestaClass = 'response-container-yes'; // Azul para "Yes"
-    } else if (respuesta === 'No 🙄') {
-        respuestaText = 'Si pusiste no, lloraré porque no me perdonaste y yo hice algo lindo.';
-        respuestaImagen = '<img src="https://i.pinimg.com/736x/ce/13/28/ce13284dbcb9d641fbe25265e587c267.jpg" alt="Gato llorando" />';
-        respuestaClass = 'response-container-no'; // Negro para "No 🙄"
+    // Check the response value
+    if (response === 'yes') {
+        responseText = 'Yupiiiiiiiiiiiiiiiiiiiii! But if I disappear again, it’s because of my colleagues who make me do too many things.';
+        responseImage = '<img src="https://i.pinimg.com/736x/03/34/b0/0334b0c904f22e716b37bae10560a7aa.jpg" alt="Yupiiii" />';
+        responseClass = 'response-container-yes'; // Blue for Yes
+    } else if (response === 'no 🙄') {
+        responseText = 'If you selected no, I will cry because you didn’t forgive me, and I did something nice.';
+        responseImage = '<img src="https://i.pinimg.com/736x/ce/13/28/ce13284dbcb9d641fbe25265e587c267.jpg" alt="Crying cat" />';
+        responseClass = 'response-container-no'; // Black for No 🙄
     }
 
-    // Actualizar texto e imagen en el contenedor
-    document.getElementById('respuesta').innerText = respuestaText;
-    document.getElementById('imagen-respuesta').innerHTML = respuestaImagen;
+    // Insert response text and image
+    document.getElementById('response').innerText = responseText;
+    document.getElementById('image-response').innerHTML = responseImage;
 
-    // Cambiar el color del cuadro dependiendo de la respuesta
-    document.getElementById('respuesta-container').className = 'response-container ' + respuestaClass;
+    // Change the class for response box styling
+    document.getElementById('response-container').className = 'response-container ' + responseClass;
 
-    // Después de un pequeño tiempo (20 segundos), mostrar el cuadro de San Valentín
+    // Show San Valentine message after 30 seconds
     setTimeout(function() {
-        document.getElementById('san-valentin-container').style.display = 'block';
-    }, 20000);
+        document.getElementById('san-valentine-container').style.display = 'block';
+    }, 30000);
 }
