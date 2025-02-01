@@ -12,27 +12,29 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
+}
+
+/* Cuadro del quiz (antes de responder) */
+.quiz-container {
+    background-color: #4CAF50;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Estilo para los títulos */
-h1 {
-    font-size: 2.5em;
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-/* Estilo para el párrafo de disculpas */
-#mensaje {
-    font-size: 1.2em;
-    color: #333;
     margin-bottom: 30px;
 }
 
-/* Estilo de los botones */
+h1 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#mensaje {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 20px;
+}
+
 .buttons button {
     font-size: 1.2em;
     padding: 10px 20px;
@@ -40,8 +42,8 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #ffffff;
+    color: #4CAF50;
     transition: background-color 0.3s ease;
 }
 
@@ -53,35 +55,45 @@ h1 {
     background-color: #388e3c;
 }
 
-/* Estilo para la imagen */
-#snoopy-img img {
+/* Cuadro de respuesta */
+.response-container {
+    background-color: #4CAF50;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen y texto de respuesta */
+#respuesta {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#imagen-respuesta img {
     max-width: 100%;
     height: auto;
     margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para el texto de respuesta */
-#respuesta {
-    font-size: 1.5em;
-    color: #333;
-    margin-top: 20px;
-    font-weight: bold;
+/* Cuadro de San Valentín */
+.san-valentin-container {
+    background-color: #ff69b4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo de los mensajes para las respuestas */
-#respuesta {
+.san-valentin-container p {
     font-size: 1.2em;
-    color: #555;
-    margin-top: 20px;
+    color: white;
+    margin-top: 10px;
 }
 
-/* Añadir algo de espaciado y márgenes a las imágenes */
-#snoopy-img {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.san-valentin-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
 }
