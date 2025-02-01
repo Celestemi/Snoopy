@@ -6,27 +6,16 @@ function responder(respuesta) {
     if (respuesta === 'si') {
         // Limpiar el contenedor de imágenes
         imagenesContainer.innerHTML = '';
-        
-        // Mostrar imágenes de Snoopy y mensaje de respuesta
-        imagenesContainer.style.display = 'block';
-        respuestaTexto.innerText = "¡Qué bien! Yo estoy bien y comiendo bien, aunque casi me hacen caer hoy.";
-        respuestaTexto.classList.add("green-text");
 
         // Agregar las imágenes de Snoopy
         const snoopyImage1 = document.createElement('img');
         snoopyImage1.src = "https://i.pinimg.com/736x/03/34/b0/0334b0c904f22e716b37bae10560a7aa.jpg";
         imagenesContainer.appendChild(snoopyImage1);
-        
-        const snoopyImage2 = document.createElement('img');
-        snoopyImage2.src = "https://i.pinimg.com/736x/95/9f/e0/959fe0a55795800a17cfeac53edc7e47.jpg";
-        imagenesContainer.appendChild(snoopyImage2);
 
         // Luego de 30 segundos, agregar las imágenes de los gatitos
         setTimeout(function() {
             const gatosAbrazadores = document.createElement('div');
             gatosAbrazadores.innerHTML = `
-                <img src="https://i.pinimg.com/736x/c8/68/fe/c868fe1ea83a70e0df2bf68acf562a19.jpg" alt="Gatitos abrazadores">
-                <img src="https://i.pinimg.com/736x/57/d3/58/57d358010c36eb439d8756229c9579c7.jpg" alt="Gatitos abrazadores">
                 <img src="https://i.pinimg.com/736x/05/5f/e2/055fe285b460e387127ceaa7f5c732ba.jpg" alt="Gatitos abrazadores">
             `;
             imagenesContainer.appendChild(gatosAbrazadores);
