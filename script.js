@@ -1,38 +1,22 @@
 function responder(respuesta) {
-    const mensaje = document.getElementById("mensaje");
-    const imagenesContainer = document.getElementById("imagenes-container");
-    const respuestaTexto = document.getElementById("respuesta");
-
+    const imagen = document.getElementById('imagen');
+    const respuestaText = document.getElementById('respuesta');
+    
     if (respuesta === 'si') {
-        // Limpiar el contenedor de imágenes
-        imagenesContainer.innerHTML = '';
-
-        // Agregar las imágenes de Snoopy
-        const snoopyImage1 = document.createElement('img');
-        snoopyImage1.src = "https://i.pinimg.com/736x/03/34/b0/0334b0c904f22e716b37bae10560a7aa.jpg";
-        imagenesContainer.appendChild(snoopyImage1);
-
-        // Luego de 30 segundos, agregar las imágenes de los gatitos
-        setTimeout(function() {
-            const gatosAbrazadores = document.createElement('div');
-            gatosAbrazadores.innerHTML = `
-                <img src="https://i.pinimg.com/736x/05/5f/e2/055fe285b460e387127ceaa7f5c732ba.jpg" alt="Gatitos abrazadores">
-            `;
-            imagenesContainer.appendChild(gatosAbrazadores);
-            respuestaTexto.innerText += " Por cierto, eres mi San Valentín y solo quiero que te conectes 5 minutos y sigas con tus cosas, sé que no es algo que te celebro.";
-        }, 30000);
+        // Mostrar la imagen y mensaje si se responde "Sí"
+        imagen.src = 'https://i.pinimg.com/736x/03/34/b0/0334b0c904f22e716b37bae10560a7aa.jpg'; // Cambia la URL por la imagen que prefieras
+        imagen.style.display = 'block';
+        respuestaText.innerHTML = 'Yupiiiiiiiiiiiiiiiiiiiii, pero si me vuelvo a desaparecer es culpa de mis compaleras que me dejan hacer muchas cosas.';
+        
+        // Después de 5 segundos, se cambia el contenido y las imágenes
+        setTimeout(() => {
+            imagen.src = 'https://i.pinimg.com/736x/c8/68/fe/c868fe1ea83a70e0df2bf68acf562a19.jpg';
+            respuestaText.innerHTML = 'Serás mi San Valentín el 14, pero solo por un corto tiempo, porque es un día laborable y hay muchas cosas por hacer.';
+        }, 5000);  // Espera 5 segundos antes de cambiar la imagen y el texto
     } else if (respuesta === 'no') {
-        // Limpiar el contenedor de imágenes
-        imagenesContainer.innerHTML = '';
-
-        // Mostrar imagen de gato llorando y mensaje
-        imagenesContainer.style.display = 'block';
-        respuestaTexto.innerText = "¡No puedes no perdonarme! Eso sería un delito y te denunciaré. Ahora, pon Sí.";
-        respuestaTexto.classList.add("red-text");
-
-        // Agregar la imagen de gato llorando
-        const gatoLlorando = document.createElement('img');
-        gatoLlorando.src = "https://i.pinimg.com/736x/ce/13/28/ce13284dbcb9d641fbe25265e587c267.jpg";
-        imagenesContainer.appendChild(gatoLlorando);
+        // Mostrar mensaje y llorar si se responde "No"
+        imagen.src = 'https://i.pinimg.com/736x/ce/13/28/ce13284dbcb9d641fbe25265e587c267.jpg'; // Cambia la URL por la imagen que prefieras
+        imagen.style.display = 'block';
+        respuestaText.innerHTML = 'Si pusiste no, lloraré porque no me perdonaste y yo hice algo lindo';
     }
 }
