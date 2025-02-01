@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Me perdonas?</title>
+    <title>Apology Message</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- Cuadro verde inicial -->
-        <div class="quiz-container">
-            <h1>¡Hola pequeña! <3</h1>
-            <p id="mensaje">I know I was absent and this is to apologize. Do you forgive me? :(</p>
+        <div class="question-box" id="question-box">
+            <h1>Hey little one! <3</h1>
+            <p id="question">I know I was absent and this is to apologize. Do you forgive me? :(</p>
             <div class="buttons">
-                <button onclick="responder('Yes')">Sí</button>
-                <button onclick="responder('No 🙄')">No</button>
+                <button onclick="respond('yes')">Yes</button>
+                <button onclick="respond('no🙄')">No</button>
             </div>
         </div>
 
-        <!-- Cuadro de respuesta -->
-        <div id="respuesta-container" class="response-container" style="display: none;">
-            <div id="respuesta"></div>
-            <div id="imagen-respuesta"></div>
+        <div id="response-container" class="response-container" style="display:none;">
+            <p id="response"></p>
+            <div id="image-response"></div>
         </div>
 
-        <!-- Cuadro de San Valentín -->
-        <div id="san-valentin-container" class="san-valentin-container" style="display: none;">
-            <p>You will be my Valentine on the 14th, but only for a short time because it is a weekday and there are many things to do</p>
+        <div id="san-valentine-container" class="san-valentine-container" style="display:none;">
+            <p>You'll be my Valentine on the 14th, but only for a short time because it's a working day and I have many things to do.</p>
         </div>
     </div>
 
