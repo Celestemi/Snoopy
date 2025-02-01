@@ -1,4 +1,4 @@
-/* Body y fondo de la página */
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     background-image: url('https://www.example.com/background-image.jpg');
@@ -54,24 +54,16 @@ h1 {
     background-color: #C0392B;
 }
 
-/* Imagen de Snoopy */
-#snoopy-img {
-    width: 300px;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-    border-radius: 10px;
-}
-
-/* Contenedor de gatos */
-#gatos-container {
+/* Imagenes de la respuesta */
+#imagenes-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
 }
 
-.gato {
-    width: 150px;
+img {
+    max-width: 100%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
