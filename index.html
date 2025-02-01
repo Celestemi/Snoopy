@@ -8,17 +8,28 @@
 </head>
 <body>
     <div class="container">
-        <h1>¡Hola pequeña! <3</h1>
-        <p id="mensaje">No sé qué hice, pero esto es para disculparme por estar ausente. ¿Me perdonas? :(</p>
-        <div class="buttons">
-            <button onclick="responder('si')">Sí</button>
-            <button onclick="responder('no')">No</button>
+        <div class="quiz-container">
+            <h1>¡Hola pequeña! <3</h1>
+            <p id="mensaje">I know I was absent and this is to apologize.  Do you forgive me? :(</p>
+            <div class="buttons">
+                <button onclick="responder('si')">Sí</button>
+                <button onclick="responder('no')">No</button>
+            </div>
         </div>
-        <div id="snoopy-img">
-            <img id="imagen" src="" alt="Imagen" style="display: none;">
+
+        <!-- Aquí se mostrará el mensaje dependiendo de la respuesta -->
+        <div id="respuesta-container" class="response-container" style="display: none;">
+            <div id="respuesta"></div>
+            <div id="imagen-respuesta"></div>
         </div>
-        <p id="respuesta"></p>
+
+        <!-- Cuadro de San Valentín, este aparece al final -->
+        <div id="san-valentin-container" class="san-valentin-container" style="display: none;">
+            <img src="https://i.pinimg.com/736x/57/d3/58/57d358010c36eb439d8756229c9579c7.jpg" alt="San Valentin" class="san-valentin-img">
+            <p>You will be my Valentine on the 14th, but only for a short time because it is a weekday and there are many things to do.</p>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
