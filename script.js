@@ -1,21 +1,49 @@
 function responder(respuesta) {
     const mensaje = document.getElementById("mensaje");
-    const snoopyImagen = document.getElementById("snoopy-img");
+    const imagenesContainer = document.getElementById("imagenes-container");
     const respuestaTexto = document.getElementById("respuesta");
-    const gatosContainer = document.getElementById("gatos-container");
 
     if (respuesta === 'si') {
-        // Mostrar imagen de Snoopy feliz
-        snoopyImagen.src = "https://upload.wikimedia.org/wikipedia/commons/4/47/Snoopy_happy.png";
-        respuestaTexto.innerText = "¡Qué bien! Debes cuidarte mucho, que yo haré lo mismo.";
+        // Limpiar el contenedor de imágenes
+        imagenesContainer.innerHTML = '';
+        
+        // Mostrar imágenes de Snoopy y mensaje de respuesta
+        imagenesContainer.style.display = 'block';
+        respuestaTexto.innerText = "¡Qué bien! Yo estoy bien y comiendo bien, aunque casi me hacen caer hoy.";
         respuestaTexto.classList.add("green-text");
-        gatosContainer.style.display = "block"; // Mostrar gatos
-        respuestaTexto.innerText += " Pero si vuelvo a ser un fantasma, no te enojes, soy un bebé.";
+
+        // Agregar las imágenes de Snoopy
+        const snoopyImage1 = document.createElement('img');
+        snoopyImage1.src = "https://i.pinimg.com/736x/03/34/b0/0334b0c904f22e716b37bae10560a7aa.jpg";
+        imagenesContainer.appendChild(snoopyImage1);
+        
+        const snoopyImage2 = document.createElement('img');
+        snoopyImage2.src = "https://i.pinimg.com/736x/95/9f/e0/959fe0a55795800a17cfeac53edc7e47.jpg";
+        imagenesContainer.appendChild(snoopyImage2);
+
+        // Luego de 30 segundos, agregar las imágenes de los gatitos
+        setTimeout(function() {
+            const gatosAbrazadores = document.createElement('div');
+            gatosAbrazadores.innerHTML = `
+                <img src="https://i.pinimg.com/736x/c8/68/fe/c868fe1ea83a70e0df2bf68acf562a19.jpg" alt="Gatitos abrazadores">
+                <img src="https://i.pinimg.com/736x/57/d3/58/57d358010c36eb439d8756229c9579c7.jpg" alt="Gatitos abrazadores">
+                <img src="https://i.pinimg.com/736x/05/5f/e2/055fe285b460e387127ceaa7f5c732ba.jpg" alt="Gatitos abrazadores">
+            `;
+            imagenesContainer.appendChild(gatosAbrazadores);
+            respuestaTexto.innerText += " Por cierto, eres mi San Valentín y solo quiero que te conectes 5 minutos y sigas con tus cosas, sé que no es algo que te celebro.";
+        }, 30000);
     } else if (respuesta === 'no') {
-        // Mostrar imagen de Snoopy enojado
-        snoopyImagen.src = "https://upload.wikimedia.org/wikipedia/commons/a/a1/Snoopy_enojado.png";
-        respuestaTexto.innerText = "Debes cuidarte mucho, ¡no me hagas enojar!";
+        // Limpiar el contenedor de imágenes
+        imagenesContainer.innerHTML = '';
+
+        // Mostrar imagen de gato llorando y mensaje
+        imagenesContainer.style.display = 'block';
+        respuestaTexto.innerText = "¡No puedes no perdonarme! Eso sería un delito y te denunciaré. Ahora, pon Sí.";
         respuestaTexto.classList.add("red-text");
-        gatosContainer.style.display = "none"; // No mostrar los gatos
+
+        // Agregar la imagen de gato llorando
+        const gatoLlorando = document.createElement('img');
+        gatoLlorando.src = "https://i.pinimg.com/736x/ce/13/28/ce13284dbcb9d641fbe25265e587c267.jpg";
+        imagenesContainer.appendChild(gatoLlorando);
     }
 }
