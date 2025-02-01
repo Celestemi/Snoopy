@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Ya Comiste?</title>
+    <title>¿Me perdonas?</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="main-container">
-        <header>
-            <h1>¡Hola pequeña! <3</h1>
-            <p id="mensaje">No sé qué hice, pero esto es para disculparme por estar ausente. ¿Me perdonas? :(</p>
-        </header>
-        
-        <div class="button-container">
-            <button class="response-button" onclick="responder('si')">Sí</button>
-            <button class="response-button" onclick="responder('no')">No</button>
+    <div class="container">
+        <h1>¡Hola pequeña! <3</h1>
+        <p id="mensaje">No sé qué hice, pero esto es para disculparme por estar ausente. ¿Me perdonas? :(</p>
+        <div class="buttons">
+            <button onclick="responder('si')">Sí</button>
+            <button onclick="responder('no')">No</button>
         </div>
-
-        <div id="imagenes-container" style="display: none;">
-            <!-- Aquí se mostrarán las imágenes -->
+        <div id="snoopy-img">
+            <img id="imagen" src="" alt="Imagen" style="display: none;">
         </div>
-
         <p id="respuesta"></p>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
