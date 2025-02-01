@@ -31,5 +31,5 @@ function respond(response) {
     // Mostramos el mensaje de San Valentín después de 30 segundos
     setTimeout(function() {
         document.getElementById('san-valentine-container').style.display = 'block';
-    }, 30000);
+    }, 3000);  // Lo mostremos más rápido ahora para que puedas ver la respuesta
 }
